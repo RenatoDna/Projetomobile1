@@ -23,7 +23,7 @@ class CadastroActivity : AppCompatActivity() {
             val password = binding.etRegPassword.text.toString()
 
             if (email.isNotEmpty()&& name.isNotEmpty() && password.isNotEmpty()){
-                viewModel.registrar(email,name,password)
+                viewModel.registrar(email,password)
             }else{
                 Toast.makeText(this,"Preencha todos os campos", Toast.LENGTH_SHORT).show()
             }
