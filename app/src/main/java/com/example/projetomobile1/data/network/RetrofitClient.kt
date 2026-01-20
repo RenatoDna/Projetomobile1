@@ -1,16 +1,29 @@
 package com.example.projetomobile1.data.network
 
+import android.content.Context
+import com.example.projetomobile1.data.network.Prefs
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 object RetrofitClient {
-    private  const val BASE_URL = "http://10.0.2.2:8080"
+    private var apiService: ApiService? = null
 
-    val apiService: ApiService by lazy{
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(ApiService::class.java)
+    fun getApiService(context: Context): ApiService {
+        return apiService ?: synchronized(this) {
+            val baseUrl = Prefs.getUrl(context)
+            val instance = Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ApiService::class.java)
+            apiService = instance
+            instance
+
+        }
+    }
+
+    fun resetClient(){
+        apiService = null
     }
 }

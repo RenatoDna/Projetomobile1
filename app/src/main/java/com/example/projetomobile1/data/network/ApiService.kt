@@ -1,10 +1,11 @@
 package com.example.projetomobile1.data.network
 
-
 import com.example.projetomobile1.data.model.LoginResponse
+import com.example.projetomobile1.data.model.Product
 import com.example.projetomobile1.data.model.UserRequest
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
@@ -14,5 +15,9 @@ interface ApiService {
     @POST("/register")
     suspend fun register(@Body request: UserRequest): Response<Unit>
 
+    @POST("/product")
+    suspend fun createProduct(@Body product: Product): Response<Unit>
 
+    @GET("/product")
+    suspend fun getProducts(): Response<List<Product>>
 }

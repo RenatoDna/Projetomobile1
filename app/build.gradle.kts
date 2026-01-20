@@ -41,10 +41,9 @@ android {
 }
 
 dependencies {
-    //implamentacão dependencia mqtt
-    implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
-    implementation("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
-
+    // JSON Parsing
+    implementation("com.google.code.gson:gson:2.10.1")
+    //dependencias login/cadatro
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.material:material:1.11.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

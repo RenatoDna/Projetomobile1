@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.LoginActivity">
+    tools:context=".ui.view.LoginActivity"
+    android:background="@color/blue"
+    android:padding="20dp">
+
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -13,7 +16,7 @@
         android:layout_marginTop="120dp"
         android:text="Bem-vindo"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +31,15 @@
         android:hint="E-mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginBottom="30dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
+            android:background="@color/white"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,12 +53,15 @@
         app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tilEmail">
+        app:layout_constraintTop_toTopOf="@id/tilEmail"
+        android:paddingTop="10dp"
+        >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

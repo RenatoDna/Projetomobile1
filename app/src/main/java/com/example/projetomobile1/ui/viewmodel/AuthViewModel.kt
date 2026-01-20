@@ -6,11 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.projetomobile1.data.model.UserRequest
 import com.example.projetomobile1.data.network.RetrofitClient
+
+
 import kotlinx.coroutines.launch
 
 class AuthViewModel : ViewModel() {
     val loginResult = MutableLiveData<Boolean>()
     val registerResult = MutableLiveData<Boolean>()
+
 
     fun realizarLogin(email: String, pass: String){
         viewModelScope.launch {

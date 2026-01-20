@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.CadastroActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    android:gravity="center">
     <TextView
         android:id="@+id/tvRegTitle"
         android:layout_width="match_parent"
@@ -20,6 +23,7 @@
         android:layout_marginTop="40dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:background="@color/white"
         android:id="@+id/tilRegEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -28,12 +32,14 @@
         android:hint="E-mail"
         app:layout_constraintTop_toBottomOf="@id/tvRegTitle">
         <com.google.android.material.textfield.TextInputEditText
+            android:background="@color/white"
             android:id="@+id/etRegEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
+        android:background="@color/white"
         android:id="@+id/tilRegName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -43,12 +49,14 @@
         app:layout_constraintTop_toBottomOf="@id/tilRegEmail">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etRegName"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:background="@color/white"
         android:id="@+id/tilRegPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -58,6 +66,7 @@
         app:passwordToggleEnabled="true"
         app:layout_constraintTop_toBottomOf="@id/tilRegName">
         <com.google.android.material.textfield.TextInputEditText
+            android:background="@color/white"
             android:id="@+id/etRegPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,4 +81,4 @@
         android:text="Cadastrar"
         app:layout_constraintTop_toBottomOf="@id/tilRegPassword" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
